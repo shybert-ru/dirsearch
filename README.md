@@ -1,21 +1,20 @@
-# dirsearch
-Скрипт по поиску подиректорий на сайте
+# dirsearch v0.0.1
+dirsearch is a tool used to brute-force directories and files in web sites.
 
-Shybert dirseach create:
+## Usage
 
+```console
+root@shybert:~# python3 pydir.py -u <URL> -w <WORDLIST> -e [EXTENSION]
+```
+```
+-h     --help          Show this help message and exit
+-u     --url           Target URL 
+-w     --wordlist      Wordlist file path
+-e     --extensions    File extension(s) to search for
+```
 
-USAGE > python3 pydir.py -u [URL] -w [WORDLIST PATH] -e (Not Obligatory) [EXTENSION]
-
-EXAMPLE > python3 pydir.py -u https:// www .web .com/ -w /home/user/Desktop/wordlists/dict.txt -e php
-
- || ARGS ||
- \/      \/
- 
--h || --help     | Usage of the script
-
--u || --url      | URL
-
--w || --wordlist | Your wordlist path
-
--e || --extension| php,html,txt ...
-
+## Examples
+```console
+root@shybert:~# python3 pydir.py -u https://www.google.com/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e php,html
+root@shybert:~# python3 pydir.py -u https://www.google.com/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+```
